@@ -30,8 +30,8 @@ const Navbar = () => {
           <Image
             src="/images/logo.png" // Replace with your logo path
             alt="Logo"
-            width={95} // Adjust width as needed
-            height={95} // Adjust height as needed
+            width={45} // Adjust width as needed
+            height={45} // Adjust height as needed
           />
         </a>
         <nav className="desktop">

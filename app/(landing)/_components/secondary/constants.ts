@@ -1,23 +1,23 @@
 const navLinks = [
   {
-    name: "Inscripciones",
-    link: "#inscripciones",
+    name: "Nuestra Misión",
+    link: "#mision",
   },
   {
-    name: "Mercancía",
+    name: "Actividades",
     link: "#mercancia",
   },
   {
-    name: "REB Kids",
-    link: "#reb-kids",
+    name: "Próximos Eventos",
+    link: "#eventos",
   },
   {
-    name: "REB Academy",
-    link: "#contact",
+    name: "Cómo participar",
+    link: "#participar",
   },
   {
     name: "Contacto",
-    link: "#contact",
+    link: "#contacto",
   },
 ];
 

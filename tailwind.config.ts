@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        luckiest_guy: ["var(--font-luckiest_guy)", "sans-serif"],
+      },
       colors: {
         emerald: {
           400: "#34d399",
