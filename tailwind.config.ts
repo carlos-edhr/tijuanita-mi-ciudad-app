@@ -14,7 +14,12 @@ const config: Config = {
         kawaiiRT: ["var(--font-kawaiiRT)"],
       },
       colors: {
+        blackOlive: "#3f3f3c",
+        jonquil: "#f8d117",
+        aquamarine: "#6ee1b4",
+        blancoHuesoFondo: "#f5f4ed",
         moradoSecundario: "#4f6bfe",
+        inchworm: "#aeff61",
         emerald: {
           400: "#34d399",
           500: "#10b981",

@@ -3,34 +3,9 @@ import { useState, useEffect } from "react";
 import { navLinks } from "../secondary/constants";
 import Image from "next/image";
 
-const LETTER_COLORS = [
-  "#FF6B6B",
-  "#4ECDC4",
-  "#45B7D1",
-  "#96CEB4",
-  "#FFEEAD",
-  "#FF9999",
-  "#88D8B0",
-  "#FFCC5C",
-  "#AAD8B0",
-  "#FF6F69",
-  "#4ECDC4",
-  "#45B7D1",
-  "#96CEB4",
-  "#FFEEAD",
-  "#FF9999",
-  "#88D8B0",
-  "#FFCC5C",
-  "#AAD8B0",
-  "#FF6F69",
-  "#4ECDC4",
-  "#45B7D1",
-];
 const Navbar = () => {
-  const title = "Tijuanita mi ciudad".split("");
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
-  const mobileBreakIndex = 20;
 
   useEffect(() => {
     // create an event listener for when the user scrolls
@@ -62,17 +37,11 @@ const Navbar = () => {
             />
           </div>
           <div className="ml-3 flex items-center">
-            <span className="flex flex-wrap items-center">
-              {title.slice(0, mobileBreakIndex).map((letter, index) => (
-                <span
-                  key={index}
-                  style={{ color: LETTER_COLORS[index] }}
-                  className="font-kawaiiRT inline-block text-xl md:text-2xl leading-none" // Added leading-none
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </span>
-              ))}
-            </span>
+            <p className="font-kawaiiRT text-moradoSecundario flex flex-wrap items-center font-sm tracking-wide">
+              <span className="  md:tracking-widest">Tijuanita </span>{" "}
+              <span className="text-aquamarine md:tracking-widest">mi </span>{" "}
+              <span className=" md:tracking-widest">ciudad</span>
+            </p>
           </div>
         </a>
 
@@ -81,7 +50,9 @@ const Navbar = () => {
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group ">
                 <a href={link}>
-                  <span className=" font-bold">{name}</span>
+                  <span className="text-moradoSecundario font-bold">
+                    {name}
+                  </span>
                   <span className="underline" />
                 </a>
               </li>

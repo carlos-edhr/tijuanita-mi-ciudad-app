@@ -20,9 +20,9 @@ const CARD_DATA = [
     image: "/images/landing/hero1.png",
   },
   {
-    title: "convocatoria",
+    title: "Convocatoria",
     description: " convocatoria",
-    buttonText: "Ver convocatoria",
+    buttonText: "Ver Convocatoria",
     color: "#4ECDC4",
     delay: 0.2,
     image: "/images/landing/hero2.png",
@@ -37,36 +37,34 @@ const CARD_DATA = [
   },
 ];
 
-const LETTER_COLORS = [
-  "#FF6B6B",
-  "#4ECDC4",
-  "#45B7D1",
-  "#96CEB4",
-  "#FFEEAD",
-  "#FF9999",
-  "#88D8B0",
-  "#FFCC5C",
-  "#AAD8B0",
-  "#FF6F69",
-  "#4ECDC4",
-  "#45B7D1",
-  "#96CEB4",
-  "#FFEEAD",
-  "#FF9999",
-  "#88D8B0",
-  "#FFCC5C",
-  "#AAD8B0",
-  "#FF6F69",
-  "#4ECDC4",
-  "#45B7D1",
-];
+// const LETTER_COLORS = [
+//   "#FF6B6B",
+//   "#4ECDC4",
+//   "#45B7D1",
+//   "#96CEB4",
+//   "#FFEEAD",
+//   "#FF9999",
+//   "#88D8B0",
+//   "#FFCC5C",
+//   "#AAD8B0",
+//   "#FF6F69",
+//   "#4ECDC4",
+//   "#45B7D1",
+//   "#96CEB4",
+//   "#FFEEAD",
+//   "#FF9999",
+//   "#88D8B0",
+//   "#FFCC5C",
+//   "#AAD8B0",
+//   "#FF6F69",
+//   "#4ECDC4",
+//   "#45B7D1",
+// ];
 
 export function HeroAlternativeSection() {
-  const title = "Tijuanita mi ciudad".split("");
-  const mobileBreakIndex = 12;
-
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#4F46E5] to-[#22C55E] px-4 pt-20 md:px-8">
+    // Previous bg gradient bg-gradient-to-br from-[#4F46E5] to-[#22C55E]
+    <section className="relative min-h-screen overflow-hidden bg-blancoHuesoFondo  px-4 pt-20 md:px-8">
       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-soft-light" />
 
       <div className="mx-auto max-w-7xl py-12 md:py-24">
@@ -79,16 +77,21 @@ export function HeroAlternativeSection() {
         >
           <motion.h1 className="font-kawaiiRT mb-6">
             <div className="md:inline-block">
-              {title.slice(0, mobileBreakIndex).map((letter, index) => (
-                <motion.span
-                  key={index}
-                  style={{ color: LETTER_COLORS[index] }}
-                  className="cursor-default inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </motion.span>
-              ))}
-            </div>
+              <h1 className="md:tracking-widest  font-outline-1 cursor-default inline-block text-4xl sm:text-5xl md:text-7xl lg:text-7xl">
+                <span className="font-outline-1-morado text-moradoSecundario md:tracking-widest">
+                  Tijuanita{" "}
+                </span>{" "}
+                <span className="text-aquamarine md:tracking-widest">mi </span>{" "}
+                <span className="text-inchworm md:tracking-widest">ciudad</span>
+              </h1>
+              {/* <motion.span
+                // key={index}
+                // style={{ color: LETTER_COLORS[index] }}
+                className="cursor-default inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+              >
+                {/* {letter === " " ? "\u00A0" : letter} */}
+              {/* </motion.span> */}
+              {/* </div>
             <div className="block md:inline-block">
               {title.slice(mobileBreakIndex).map((letter, index) => (
                 <motion.span
@@ -97,8 +100,7 @@ export function HeroAlternativeSection() {
                   className="cursor-default inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 >
                   {letter === " " ? "\u00A0" : letter}
-                </motion.span>
-              ))}
+                </motion.span> */}
             </div>
           </motion.h1>
         </motion.div>
@@ -150,8 +152,8 @@ export function HeroAlternativeSection() {
                     className="mt-6"
                   >
                     <Button
-                      className="w-full rounded-xl bg-white/20 py-6 text-lg font-bold text-white backdrop-blur-lg transition-all hover:bg-white/30"
-                      style={{ backgroundColor: card.color + "40" }}
+                      className="w-full rounded-xl  py-6 text-lg font-bold text-white  transition-all hover:bg-white/30"
+                      style={{ backgroundColor: card.color }}
                     >
                       {card.buttonText}
                     </Button>
