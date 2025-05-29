@@ -12,7 +12,7 @@ const CARD_DATA = [
     buttonText: "Derecho a la movilidad segura",
     color: "#FF6B6B",
     delay: 0.1,
-    image: "/images/landing/hero1.png",
+    image: "/images/landing/quees1.png",
   },
   {
     title: "Espacios creativos",
@@ -20,23 +20,24 @@ const CARD_DATA = [
     buttonText: "Derecho al juego y participación",
     color: "#4ECDC4",
     delay: 0.2,
-    image: "/images/landing/hero2.png",
+    image: "/images/landing/quees2.png",
   },
   {
-    title: "Próximas actividades",
+    title: "Contexto",
     description: "participa",
-    buttonText: "Participa",
+    buttonText: "Contexto",
     color: "#FFCC5C",
     delay: 0.3,
-    image: "/images/landing/hero3.png",
+    image: "/images/landing/quees3.png",
   },
 ];
 
 export function QueEsSection() {
   return (
     <section
+      id="quees"
       className="relative overflow-hidden 
-     bg-gradient-to-bl from-[#22C55E] to-[#4F46E5] 
+     bg-blancoHuesoFondo 
     py-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-soft-light" />
@@ -117,7 +118,7 @@ export function QueEsSection() {
           className="text-center mb-16"
         >
           <h2 className="font-kawaiiRT text-4xl text-white md:text-6xl mb-8">
-            <span className="block bg-gradient-to-r from-[#fde047] to-[#f59e0b] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent">
               ¿Qué es?
             </span>
           </h2>
@@ -126,9 +127,9 @@ export function QueEsSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="mx-auto mt-6 max-w-4xl text-lg text-cyan-100 md:text-xl text-justify px-4"
+            className="mx-auto mt-6 max-w-4xl text-lg text-blackOlive md:text-xl text-justify px-4"
           >
-            <em>Tijuanaita, mi ciudad</em> es una iniciativa ciudadana para
+            <em>Tijuanita, mi ciudad</em> es una iniciativa ciudadana para
             recrear las calles mediante actividades como caminatas y vías
             recreativas, espacios de convivencia horizontal, libre de consumo,
             compartiendo de manera pacífica una ciudad migrante como Tijuana en
@@ -182,8 +183,8 @@ export function QueEsSection() {
                     className="mt-4"
                   >
                     <Button
-                      className="w-full rounded-xl bg-white/20 py-4 text-base font-bold text-white backdrop-blur-lg transition-all hover:bg-white/30"
-                      style={{ backgroundColor: card.color + "40" }}
+                      className="w-full rounded-xl  py-4 text-base font-bold text-white  transition-all "
+                      style={{ backgroundColor: card.color }}
                     >
                       {card.buttonText}
                     </Button>
@@ -280,9 +281,12 @@ export function QueEsSection() {
         transition={{ delay: 0.8 }}
         className="mt-16 text-center"
       >
-        <Button className="animate-shine bg-gradient-to-r from-[#fde047] via-[#f59e0b] to-[#fde047] bg-[length:200%_auto] px-8 py-6 text-lg font-semibold text-gray-900 hover:scale-105 transition-transform">
+        <Button className="inline-flex animate-shine items-center justify-center rounded-2xl bg-gradient-to-r from-[#4F46E5] via-[#0a33ff] to-[#4F46E5] bg-[length:200%_auto] px-8 py-6 text-lg font-semibold text-white transition-all hover:scale-105 hover:shadow-lg">
           ¡Únete !
         </Button>
+        {/* <Button className="animate-shine bg-gradient-to-r from-[#fde047] via-[#f59e0b] to-[#fde047] bg-[length:200%_auto] px-8 py-6 text-lg font-semibold text-gray-900 hover:scale-105 transition-transform">
+          ¡Únete !
+        </Button> */}
       </motion.div>
     </section>
   );

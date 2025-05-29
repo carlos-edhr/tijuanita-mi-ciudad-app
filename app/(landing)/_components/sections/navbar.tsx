@@ -50,7 +50,7 @@ const Navbar = () => {
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group ">
                 <a href={link}>
-                  <span className="text-moradoSecundario font-bold">
+                  <span className="text-moradoSecundario font-bold hover:text-aquamarine">
                     {name}
                   </span>
                   <span className="underline" />

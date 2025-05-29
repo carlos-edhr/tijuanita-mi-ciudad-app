@@ -217,7 +217,7 @@ section {
           @apply text-white-50 relative;
 
           span {
-            @apply transition-colors duration-300 hover:text-white;
+            @apply transition-colors duration-300 hover:text-[#3f3f3c];
           }
 
           .underline {

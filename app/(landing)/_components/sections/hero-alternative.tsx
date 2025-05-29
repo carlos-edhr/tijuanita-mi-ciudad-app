@@ -13,7 +13,8 @@ import Image from "next/image";
 const CARD_DATA = [
   {
     title: "Vía recreativa",
-    description: "Vía recreativa",
+    description:
+      "Cierre temporal de calles para juego libre y actividades familiares",
     buttonText: "Reporte",
     color: "#FF6B6B",
     delay: 0.1,
@@ -21,7 +22,7 @@ const CARD_DATA = [
   },
   {
     title: "Convocatoria",
-    description: " convocatoria",
+    description: "Colorear al capibara de la vía recreativa de verano",
     buttonText: "Ver Convocatoria",
     color: "#4ECDC4",
     delay: 0.2,
@@ -29,7 +30,7 @@ const CARD_DATA = [
   },
   {
     title: "Próximas actividades",
-    description: "participa",
+    description: "Conoce nuestras próximas actividades de entrada libre",
     buttonText: "Participa",
     color: "#FFCC5C",
     delay: 0.3,
@@ -142,9 +143,9 @@ export function HeroAlternativeSection() {
                   >
                     {card.title}
                   </CardTitle>
-                  {/* <CardDescription className="text-xl font-semibold text-white">
+                  <CardDescription className="text-sm text-blackOlive">
                     {card.description}
-                  </CardDescription> */}
+                  </CardDescription>
 
                   <motion.div
                     whileHover={{ scale: 1.05 }}

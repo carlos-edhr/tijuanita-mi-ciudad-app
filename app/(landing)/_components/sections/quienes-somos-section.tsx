@@ -1,44 +1,109 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bike, BookOpen, Route, Footprints } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
-const activities = [
+const teamMembers = [
   {
-    icon: <Route className="h-12 w-12" />,
-    title: "Vías Recreativas",
+    name: "Tamara",
+    role: "Licenciada en Turismo y mamá",
     description:
-      "Cierre temporal de calles para juego libre y actividades familiares",
-    benefit: "Fomenta la convivencia urbana segura",
+      "Soy Tamara, licenciada en Turismo y mamá. En 2024, al vivir la primera vía recreativa de Tijuanita Mi Ciudad, recordé lo valioso de tener espacios seguros para jugar y convivir. Por eso me sumé a este proyecto, convencida de que la movilidad libre, la salud mental y el derecho de l@s niñ@s a disfrutar su ciudad deben ser una prioridad. Las vías recreativas son una oportunidad para reconectar con nuestra comunidad y fortalecer el amor por Tijuana.",
+    image: "/images/landing/quienesomos1.png",
     color: "#4ECDC4",
   },
   {
-    icon: <Bike className="h-12 w-12" />,
-    title: "Ciclismo Infantil",
-    description: "Talleres de movilidad segura y rutas guiadas para niños",
-    benefit: "Promueve actividad física y autonomía",
+    name: "Ana",
+    role: "Psicóloga socioambiental",
+    description:
+      "Soy Ana Karen, psicóloga socioambiental con interés en la educación y el desarrollo humano. Colaboro en Tijuanita para pasar de solo imaginar a poder crear espacios restauradores que promuevan derechos humanos y calidad de vida, mientras conocemos el mundo para enseñarnos a habitarlo con más amor.",
+    image: "/images/landing/quienesomos2.png",
     color: "#FDE047",
   },
   {
-    icon: <BookOpen className="h-12 w-12" />,
-    title: "Eventos de Lectura",
-    description: "Sesiones de cuentacuentos en espacios al aire libre",
-    benefit: "Estimula imaginación y aprendizaje",
+    name: "Ivonne",
+    role: "Diseñadora y activista",
+    description:
+      "Soy Ivonne, diseñadora y activista en temas de movilidad con perspectiva de género. Desde la seguridad vial, la justicia espacial y el cuidado nace mi impulso por abrir espacios de encuentro, juego y creatividad. Actividades organizadas por personas voluntarias de manera autogestivas, sin fines de lucro, partidistas o religiosos.",
+    image: "/images/landing/quienesomos3.png",
     color: "#FF6B6B",
   },
 ];
 
 export function QuienesSomosSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#4F46E5] to-[#22C55E] py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      id="quienessomos"
+      className="relative overflow-hidden bg-blancoHuesoFondo py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="absolute inset-0 bg-[url('/images/textures/noise.jpg')] opacity-10 mix-blend-soft-light" />
 
-      {/* Elemento decorativo animado */}
+      {/* New decorative elements with varied shapes and animations */}
       <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute -left-64 -bottom-64 h-[600px] w-[600px] rounded-full bg-[#fde047]/10 blur-3xl"
+        animate={{
+          rotate: 360,
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-[10%] top-[15%] h-40 w-40 rounded-full bg-[#4ECDC4]/20 blur-xl"
+      />
+
+      <motion.div
+        animate={{
+          y: [0, -40, 0],
+          rotate: [0, 45, 90, 135, 180],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute right-[15%] top-[25%] h-24 w-24 bg-[#FF6B6B]/30 blur-lg"
+      />
+
+      <motion.div
+        animate={{
+          x: [0, 50, 0],
+          borderRadius: ["50%", "30%", "50%"],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-[20%] bottom-[20%] h-32 w-32 bg-[#FDE047]/30 blur-xl"
+      />
+
+      <motion.div
+        animate={{
+          scale: [1, 1.5, 1],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute right-[10%] bottom-[15%] h-20 w-20 bg-[#4ECDC4]/30 blur-lg"
+      />
+
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          x: [0, 30, 0],
+          borderRadius: ["30%", "50%", "30%"],
+        }}
+        transition={{
+          duration: 14,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-[15%] top-[35%] h-16 w-16 bg-[#FF6B6B]/30 blur-lg"
       />
 
       <div className="mx-auto max-w-7xl">
@@ -50,76 +115,127 @@ export function QuienesSomosSection() {
           className="text-center mb-16"
         >
           <h2 className="font-kawaiiRT text-4xl text-white md:text-6xl mb-8">
-            <span className="block bg-gradient-to-r from-[#fde047] to-[#f59e0b] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent">
               ¿Quiénes somos?
             </span>
           </h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mx-auto mt-6 max-w-4xl text-lg text-gray-700 md:text-xl text-justify px-4"
+          >
+            Actividades organizadas por personas voluntarias de manera
+            autogestivas, sin fines de lucro, partidistas o religiosos.
+          </motion.p>
         </motion.div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {activities.map((activity, index) => (
+        {/* Team Grid - Three cards */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {teamMembers.map((member, index) => (
             <motion.div
-              key={activity.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={member.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl bg-white/10 p-8 backdrop-blur-lg transition-all hover:bg-white/20"
+              transition={{ delay: index * 0.2 }}
+              whileHover={{
+                y: -10,
+                transition: { duration: 0.3 },
+              }}
+              className="group relative overflow-hidden rounded-3xl bg-white/90 p-6 backdrop-blur-lg shadow-2xl"
             >
-              <div
-                className="absolute inset-0 -z-10 opacity-30 transition-opacity group-hover:opacity-50"
+              {/* Profile image */}
+              <div className="relative h-64 overflow-hidden rounded-2xl mb-6">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Image overlay gradient */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+                  style={{
+                    background: `linear-gradient(to top, ${member.color}40 0%, transparent 70%)`,
+                  }}
+                />
+              </div>
+
+              {/* Member info */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  {member.name}
+                </h3>
+
+                <div
+                  className="inline-block rounded-full px-4 py-1 mb-4 text-sm font-semibold"
+                  style={{
+                    backgroundColor: `${member.color}20`,
+                    color: member.color,
+                  }}
+                >
+                  {member.role}
+                </div>
+
+                <p className="text-gray-600 mb-6 text-justify">
+                  {member.description}
+                </p>
+              </div>
+
+              {/* Animated decorative elements */}
+              <motion.div
+                className="absolute -top-4 -right-4 h-16 w-16 rounded-full"
                 style={{
-                  background: `radial-gradient(circle at center, ${activity.color}40 0%, transparent 70%)`,
+                  backgroundColor: `${member.color}20`,
+                  border: `3px solid ${member.color}20`,
+                  zIndex: -1,
+                }}
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 45, 0],
+                }}
+                transition={{
+                  duration: 5 + index,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
               />
 
-              <div className="text-center">
-                <div
-                  className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl transition-all"
-                  style={{ backgroundColor: `${activity.color}20` }}
-                >
-                  {activity.icon}
-                </div>
-
-                <h3 className="font-luckiest_guy text-2xl text-white mb-4">
-                  {activity.title}
-                </h3>
-
-                <p className="text-cyan-50 mb-6">{activity.description}</p>
-
-                <div
-                  className="inline-block rounded-full px-4 py-2 text-sm font-semibold"
-                  style={{
-                    backgroundColor: `${activity.color}30`,
-                    color: activity.color,
-                  }}
-                >
-                  {activity.benefit}
-                </div>
-              </div>
-
               <motion.div
-                className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-[#fde047]/20"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3 + index, repeat: Infinity }}
+                className="absolute -bottom-3 -left-3 h-12 w-12"
+                style={{
+                  backgroundColor: `${member.color}20`,
+                  border: `3px solid ${member.color}20`,
+                  zIndex: -1,
+                }}
+                animate={{
+                  y: [0, -10, 0],
+                  x: [0, 8, 0],
+                  borderRadius: ["30%", "50%", "30%"],
+                }}
+                transition={{
+                  duration: 4 + index,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
             </motion.div>
           ))}
         </div>
 
-        {/* Llamado a la acción */}
+        {/* Call to action */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <Button
-            variant="ghost"
-            className="inline-flex animate-shine items-center justify-center rounded-2xl bg-gradient-to-r from-[#FDE047] via-[#FF6B6B] to-[#FDE047] bg-[length:200%_auto] px-8 py-6 text-lg font-semibold text-gray-900 transition-all hover:scale-105 hover:shadow-lg"
-          >
-            Ver calendario completo
-          </Button>
+          {/*TODO: AGREGAR COLABORACIONES */}
+          {/* <Button className="inline-flex animate-shine items-center justify-center rounded-2xl bg-gradient-to-r from-[#4F46E5] via-[#0a33ff] to-[#4F46E5] bg-[length:200%_auto] px-8 py-6 text-lg font-semibold text-white transition-all hover:scale-105 hover:shadow-lg">
+            Conoce a todo el equipo
+          </Button> */}
         </motion.div>
       </div>
     </section>
