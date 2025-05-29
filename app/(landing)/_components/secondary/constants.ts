@@ -1,22 +1,22 @@
 const navLinks = [
   {
-    name: "Nuestra Misión",
-    link: "#mision",
+    name: "¿Qué es?",
+    link: "#quees",
   },
   {
-    name: "Actividades",
-    link: "#mercancia",
+    name: "¿Quiénes somos?",
+    link: "#quienes",
   },
   {
-    name: "Próximos Eventos",
+    name: "¿Qué hacemos?",
     link: "#eventos",
   },
   {
-    name: "Cómo participar",
-    link: "#participar",
+    name: "Galería",
+    link: "#galeria",
   },
   {
-    name: "Contacto",
+    name: "Contáctanos",
     link: "#contacto",
   },
 ];

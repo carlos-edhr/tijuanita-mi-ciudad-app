@@ -14,6 +14,7 @@ const config: Config = {
         kawaiiRT: ["var(--font-kawaiiRT)"],
       },
       colors: {
+        moradoSecundario: "#4f6bfe",
         emerald: {
           400: "#34d399",
           500: "#10b981",

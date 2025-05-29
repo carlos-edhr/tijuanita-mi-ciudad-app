@@ -63,7 +63,7 @@ const LETTER_COLORS = [
 
 export function HeroAlternativeSection() {
   const title = "Tijuanita mi ciudad".split("");
-  const mobileBreakIndex = 11;
+  const mobileBreakIndex = 12;
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#4F46E5] to-[#22C55E] px-4 pt-20 md:px-8">
