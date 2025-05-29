@@ -85,23 +85,6 @@ export function HeroAlternativeSection() {
                 <span className="text-aquamarine md:tracking-widest">mi </span>{" "}
                 <span className="text-inchworm md:tracking-widest">ciudad</span>
               </h1>
-              {/* <motion.span
-                // key={index}
-                // style={{ color: LETTER_COLORS[index] }}
-                className="cursor-default inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-              >
-                {/* {letter === " " ? "\u00A0" : letter} */}
-              {/* </motion.span> */}
-              {/* </div>
-            <div className="block md:inline-block">
-              {title.slice(mobileBreakIndex).map((letter, index) => (
-                <motion.span
-                  key={index + mobileBreakIndex}
-                  style={{ color: LETTER_COLORS[index + mobileBreakIndex] }}
-                  className="cursor-default inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </motion.span> */}
             </div>
           </motion.h1>
         </motion.div>

@@ -36,7 +36,7 @@ const galleryItems = [
 
 export function GallerySection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#4F46E5] to-[#22C55E] py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-blancoHuesoFondo py-20 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-soft-light" />
 
       <motion.div
@@ -53,10 +53,9 @@ export function GallerySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-luckiest_guy text-4xl text-white md:text-6xl">
-            Nuestra
-            <span className="block bg-gradient-to-r from-[#FDE047] to-[#4ECDC4] bg-clip-text text-transparent">
-              Galería
+          <h2 className="font-kawaiiRT text-4xl text-white md:text-6xl mb-8">
+            <span className="block bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent">
+              Nuestra Galería
             </span>
           </h2>
           <motion.p

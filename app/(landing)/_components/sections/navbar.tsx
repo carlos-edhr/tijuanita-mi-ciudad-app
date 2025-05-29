@@ -37,7 +37,7 @@ const Navbar = () => {
             />
           </div>
           <div className="ml-3 flex items-center">
-            <p className="font-kawaiiRT text-moradoSecundario flex flex-wrap items-center font-sm tracking-wide">
+            <p className="font-kawaiiRT bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent flex flex-wrap items-center font-sm tracking-wide">
               <span className="  md:tracking-widest">Tijuanita </span>{" "}
               <span className="text-aquamarine md:tracking-widest">mi </span>{" "}
               <span className=" md:tracking-widest">ciudad</span>

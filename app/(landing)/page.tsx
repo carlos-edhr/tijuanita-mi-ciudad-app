@@ -16,7 +16,7 @@ export default function Home() {
       <HeroAlternativeSection />
       <QueEsSection />
       <QuienesSomosSection />
-      <NextEventsSection />
+      {/* <NextEventsSection /> */}
       <GallerySection />
       <Footer />
       {/* <AppShowcase />
