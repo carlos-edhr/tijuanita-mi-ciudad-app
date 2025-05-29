@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         luckiest_guy: ["var(--font-luckiest_guy)", "sans-serif"],
+        kawaiiRT: ["var(--font-kawaiiRT)"],
       },
       colors: {
         emerald: {
