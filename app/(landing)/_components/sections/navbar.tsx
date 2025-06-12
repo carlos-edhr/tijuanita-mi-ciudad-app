@@ -29,19 +29,19 @@ const Navbar = () => {
         <a href="#hero" className="logo flex items-center">
           <div className="flex-shrink-0">
             <Image
-              src="/images/logos/logo.png" // Replace with your logo path
+              src="/images/landing/navbar2.png" // Replace with your logo path
               alt="Logo"
-              width={64} // Reduced size for better proportion
-              height={64} // Reduced size for better proportion
-              className="h-16 w-16" // Consistent sizing
+              width={200} // Reduced size for better proportion
+              height={200} // Reduced size for better proportion
+              className="" // Consistent sizing
             />
           </div>
           <div className="ml-3 flex items-center">
-            <p className="font-kawaiiRT bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent flex flex-wrap items-center font-sm tracking-wide">
+            {/* <p className="font-kawaiiRT bg-gradient-to-r from-moradoSecundario to-[#0a33ff] bg-clip-text text-transparent flex flex-wrap items-center font-sm tracking-wide">
               <span className="  md:tracking-widest">Tijuanita </span>{" "}
               <span className="text-aquamarine md:tracking-widest">mi </span>{" "}
               <span className=" md:tracking-widest">ciudad</span>
-            </p>
+            </p> */}
           </div>
         </a>
 

@@ -14,11 +14,12 @@ const CARD_DATA = [
   {
     title: "Vía recreativa",
     description:
-      "Cierre temporal de calles para juego libre y actividades familiares",
+      "Ocupación temporal de vialidades para el uso recreativo y seguro fomentando la convivencia, el esparcimiento y la movilidad activa",
     buttonText: "Reporte",
     color: "#FF6B6B",
     delay: 0.1,
-    image: "/images/landing/hero1.png",
+    image: "/videos/hero1.mp4",
+    file: "/documentos/hero-reporte.pdf", // Archivo PDF para el primer botón
   },
   {
     title: "Convocatoria",
@@ -26,7 +27,8 @@ const CARD_DATA = [
     buttonText: "Ver Convocatoria",
     color: "#4ECDC4",
     delay: 0.2,
-    image: "/images/landing/hero2.png",
+    image: "/images/landing/hero2.webp",
+    file: "/documentos/hero-2.pdf", // Imagen para el segundo botón
   },
   {
     title: "Próximas actividades",
@@ -34,33 +36,10 @@ const CARD_DATA = [
     buttonText: "Participa",
     color: "#FFCC5C",
     delay: 0.3,
-    image: "/images/landing/hero3.png",
+    image: "/images/landing/hero3.jpg",
+    file: "/documentos/hero3.pdf", // PDF para el tercer botón
   },
 ];
-
-// const LETTER_COLORS = [
-//   "#FF6B6B",
-//   "#4ECDC4",
-//   "#45B7D1",
-//   "#96CEB4",
-//   "#FFEEAD",
-//   "#FF9999",
-//   "#88D8B0",
-//   "#FFCC5C",
-//   "#AAD8B0",
-//   "#FF6F69",
-//   "#4ECDC4",
-//   "#45B7D1",
-//   "#96CEB4",
-//   "#FFEEAD",
-//   "#FF9999",
-//   "#88D8B0",
-//   "#FFCC5C",
-//   "#AAD8B0",
-//   "#FF6F69",
-//   "#4ECDC4",
-//   "#45B7D1",
-// ];
 
 export function HeroAlternativeSection() {
   return (
@@ -103,14 +82,30 @@ export function HeroAlternativeSection() {
               }}
             >
               <Card className="h-full overflow-hidden rounded-3xl border-4 border-white/20 bg-white/10 backdrop-blur-lg shadow-2xl">
-                {/* Image Section */}
+                {/* Sección de imagen o video */}
                 <div className="relative h-86 overflow-hidden">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-auto h-auto"
-                  />
-                  {/* Image overlay gradient */}
+                  {index === 0 ? (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-auto h-auto"
+                      poster={card.image}
+                    >
+                      <source
+                        src={card.image.replace(".png", ".mp4")}
+                        type="video/mp4"
+                      />
+                      Tu navegador no soporta el video.
+                    </video>
+                  ) : (
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-auto h-auto"
+                    />
+                  )}
+                  {/* Gradiente de overlay */}
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
                     style={{
@@ -136,49 +131,21 @@ export function HeroAlternativeSection() {
                     className="mt-6"
                   >
                     <Button
-                      className="w-full rounded-xl  py-6 text-lg font-bold text-white  transition-all hover:bg-white/30"
+                      className="w-full rounded-xl py-6 text-lg font-bold text-white transition-all hover:bg-white/30"
                       style={{ backgroundColor: card.color }}
+                      onClick={() => {
+                        const isPdf = card.file.endsWith(".pdf");
+                        window.open(
+                          card.file,
+                          "_blank",
+                          `noopener,noreferrer${isPdf ? ",width=800,height=600" : ""}`,
+                        );
+                      }}
                     >
                       {card.buttonText}
                     </Button>
                   </motion.div>
                 </CardContent>
-
-                {/* Animated elements */}
-                <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 10, -10, 0],
-                  }}
-                  transition={{
-                    duration: 4 + index,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -right-6 -top-6 h-24 w-24 rounded-full"
-                  style={{
-                    backgroundColor: card.color + "20",
-                    border: `4px solid ${card.color}20`,
-                    zIndex: -1,
-                  }}
-                />
-                <motion.div
-                  animate={{
-                    y: [0, -15, 0],
-                    x: [0, 10, 0],
-                  }}
-                  transition={{
-                    duration: 3 + index,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -bottom-4 -left-4 h-16 w-16 rounded-full"
-                  style={{
-                    backgroundColor: card.color + "20",
-                    border: `4px solid ${card.color}20`,
-                    zIndex: -1,
-                  }}
-                />
               </Card>
             </motion.div>
           ))}
